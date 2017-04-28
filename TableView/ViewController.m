@@ -1,29 +1,28 @@
-//
-//  ViewController.m
-//  TableView
-//
+
 //  Created by samir on 28/04/2017.
 //  Copyright © 2017 Samir Guerdah. All rights reserved.
-//
 
 #import "ViewController.h"
 
-@interface ViewController ()
+#import "SGHomeDataSource.h"
 
+@interface ViewController ()
+@property (nonatomic, weak) IBOutlet UITableView *tableView;
+@property (nonatomic, strong) SGHomeDataSource *dataSource;
 @end
 
 @implementation ViewController
 
 - (void)viewDidLoad {
    [super viewDidLoad];
-   // Do any additional setup after loading the view, typically from a nib.
+   
+   self.tableView.estimatedRowHeight = 200;
+   self.tableView.rowHeight = UITableViewAutomaticDimension;
+   
+   self.dataSource = [[SGHomeDataSource alloc] init];
+   self.dataSource.sections = [SGHomeDataSource initialSections];
+   [self.dataSource registerReusableViews:self.tableView];
+   self.tableView.dataSource = self.dataSource;
 }
-
-
-- (void)didReceiveMemoryWarning {
-   [super didReceiveMemoryWarning];
-   // Dispose of any resources that can be recreated.
-}
-
 
 @end
