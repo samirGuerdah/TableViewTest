@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		643F17F51EB5D29F002954EC /* SGHomeHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 643F17F41EB5D29F002954EC /* SGHomeHeaderView.m */; };
+		643F17F71EB5D2AB002954EC /* SGHomeHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 643F17F61EB5D2AB002954EC /* SGHomeHeaderView.xib */; };
 		64DB627F1EB30EB6005B70BE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 64DB627E1EB30EB6005B70BE /* main.m */; };
 		64DB62821EB30EB6005B70BE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 64DB62811EB30EB6005B70BE /* AppDelegate.m */; };
 		64DB62851EB30EB6005B70BE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 64DB62841EB30EB6005B70BE /* ViewController.m */; };
@@ -24,6 +26,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		643F17F31EB5D29F002954EC /* SGHomeHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGHomeHeaderView.h; sourceTree = "<group>"; };
+		643F17F41EB5D29F002954EC /* SGHomeHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGHomeHeaderView.m; sourceTree = "<group>"; };
+		643F17F61EB5D2AB002954EC /* SGHomeHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SGHomeHeaderView.xib; sourceTree = "<group>"; };
 		64DB627A1EB30EB6005B70BE /* TableView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TableView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		64DB627E1EB30EB6005B70BE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		64DB62801EB30EB6005B70BE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -61,6 +66,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		643F17F21EB5D27E002954EC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				643F17F31EB5D29F002954EC /* SGHomeHeaderView.h */,
+				643F17F41EB5D29F002954EC /* SGHomeHeaderView.m */,
+				643F17F61EB5D2AB002954EC /* SGHomeHeaderView.xib */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
 		64DB62711EB30EB5005B70BE = {
 			isa = PBXGroup;
 			children = (
@@ -115,6 +130,7 @@
 		64DB62A11EB313D3005B70BE /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				643F17F21EB5D27E002954EC /* Views */,
 				64DB62A41EB31477005B70BE /* Cells */,
 				64DB62A31EB31470005B70BE /* DataSource */,
 				64DB62831EB30EB6005B70BE /* ViewController.h */,
@@ -216,6 +232,7 @@
 				64DB62AE1EB314BC005B70BE /* SGButtonCell.xib in Resources */,
 				64DB628D1EB30EB6005B70BE /* LaunchScreen.storyboard in Resources */,
 				64DB628A1EB30EB6005B70BE /* Assets.xcassets in Resources */,
+				643F17F71EB5D2AB002954EC /* SGHomeHeaderView.xib in Resources */,
 				64DB62A91EB31497005B70BE /* SGLabelCell.xib in Resources */,
 				64DB62881EB30EB6005B70BE /* Main.storyboard in Resources */,
 			);
@@ -232,6 +249,7 @@
 				64DB62971EB30EEF005B70BE /* SGBaseDataSource.m in Sources */,
 				64DB62A81EB31497005B70BE /* SGLabelCell.m in Sources */,
 				64DB629D1EB30F11005B70BE /* SGBaseTableViewSection.m in Sources */,
+				643F17F51EB5D29F002954EC /* SGHomeHeaderView.m in Sources */,
 				64DB62821EB30EB6005B70BE /* AppDelegate.m in Sources */,
 				64DB62A01EB313CA005B70BE /* SGHomeDataSource.m in Sources */,
 				64DB629A1EB30EFF005B70BE /* SGBaseTableViewRow.m in Sources */,
@@ -395,6 +413,7 @@
 				64DB62931EB30EB6005B70BE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

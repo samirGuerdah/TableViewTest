@@ -8,9 +8,10 @@
 #import "SGBaseTableViewSection.h"
 #import "SGBaseTableViewRow.h"
 
-// Cells
+// Cells && Views
 #import "SGLabelCell.h"
 #import "SGButtonCell.h"
+#import "SGHomeHeaderView.h"
 
 // Enums representing the rows and sections
 typedef NS_ENUM(NSInteger, SGHomeSection) {
@@ -52,7 +53,6 @@ typedef NS_ENUM(NSInteger, SGHomeRow) {
    return nil;
 }
 
-
 - (SGLabelCell *)labelCellForTableView:(UITableView *)tableView {
    SGLabelCell *cell = (SGLabelCell *)[tableView dequeueReusableCellWithIdentifier:NSStringFromClass([SGLabelCell class])];
    cell.label.text = @"Test de typage des section et row de tableView";
@@ -66,17 +66,40 @@ typedef NS_ENUM(NSInteger, SGHomeRow) {
 }
 
 + (NSArray <SGBaseTableViewSection*> *)initialSections {
+   
    // Section1
    SGBaseTableViewSection *section1 = [[SGBaseTableViewSection alloc] initWithType:SGHomeSection1];
-   SGBaseTableViewRow *row1 = [[SGBaseTableViewRow alloc] initWithType:SGHomeRowLabel];
-   section1.rows = @[row1];
+   section1.state = SGTableViewSectionStateOpened;
+   section1.rows = [self rowsForSection:section1];
    
    // Section2
    SGBaseTableViewSection *section2 = [[SGBaseTableViewSection alloc] initWithType:SGHomeSection2];
-   SGBaseTableViewRow *row3 = [[SGBaseTableViewRow alloc] initWithType:SGHomeRowButton];
-   section2.rows = @[row3];
-   
+   section2.rows = [self rowsForSection:section2];
+
    return @[section1, section2];
+}
+
++ (NSArray <SGBaseTableViewRow *> *)rowsForSection:(SGBaseTableViewSection *)section {
+   switch (section.type) {
+      case SGHomeSection1: {
+         SGBaseTableViewRow *row1 = [[SGBaseTableViewRow alloc] initWithType:SGHomeRowLabel];
+         SGBaseTableViewRow *row2 = [[SGBaseTableViewRow alloc] initWithType:SGHomeRowLabel];
+         return @[row1, row2];
+      }
+      case SGHomeSection2: {
+         SGBaseTableViewRow *row = [[SGBaseTableViewRow alloc] initWithType:SGHomeRowButton];
+         return @[row];
+      }
+   }
+   return @[];
+}
+
+#pragma mark - Header views
+- (UIView *)headerViewForSectionType:(NSUInteger)sectionType {
+   switch (sectionType) {
+      case SGHomeSection1: return [SGHomeHeaderView loadView];
+      default: return [[UIView alloc] initWithFrame:CGRectZero];
+   }
 }
 
 @end

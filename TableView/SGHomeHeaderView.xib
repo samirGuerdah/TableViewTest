@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="izt-Kd-Wkf" userLabel="HomeHeaderView" customClass="SGHomeHeaderView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="83"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FnP-eq-1Aq" userLabel="BackgroundView">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="83"/>
+                    <color key="backgroundColor" red="0.90980392160000001" green="0.36470588240000001" blue="0.18823529410000001" alpha="1" colorSpace="calibratedRGB"/>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SectionHeader" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0GM-gX-mJb">
+                    <rect key="frame" x="16" y="31" width="114" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="0GM-gX-mJb" firstAttribute="leading" secondItem="izt-Kd-Wkf" secondAttribute="leading" constant="16" id="2XF-GK-1Rl"/>
+                <constraint firstAttribute="trailing" secondItem="FnP-eq-1Aq" secondAttribute="trailing" id="AMo-nx-IWP"/>
+                <constraint firstAttribute="bottom" secondItem="FnP-eq-1Aq" secondAttribute="bottom" id="BWQ-8m-QXB"/>
+                <constraint firstItem="FnP-eq-1Aq" firstAttribute="leading" secondItem="izt-Kd-Wkf" secondAttribute="leading" id="Ndf-aW-A8y"/>
+                <constraint firstItem="FnP-eq-1Aq" firstAttribute="top" secondItem="izt-Kd-Wkf" secondAttribute="top" id="WvY-y0-xIx"/>
+                <constraint firstItem="0GM-gX-mJb" firstAttribute="centerY" secondItem="izt-Kd-Wkf" secondAttribute="centerY" id="boV-cJ-Bw9"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-136.5" y="-346.5"/>
+        </view>
+    </objects>
+</document>

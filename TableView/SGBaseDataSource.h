@@ -9,8 +9,11 @@
 @class SGBaseTableViewSection;
 
 @interface SGBaseDataSource : NSObject <UITableViewDataSource>
-
 @property (nonatomic, strong) NSArray <SGBaseTableViewSection *> *sections;
 - (void)registerReusableViews:(UITableView *)tableView;
+- (UIView *)headerViewForSectionType:(NSUInteger)sectionType;
+- (SGBaseTableViewSection *)sectionForType:(NSUInteger)sectionType;
 + (NSArray <SGBaseTableViewSection*> *)initialSections;
+- (void)toggleSectionType:(NSUInteger)sectionType
+             forTableView:(UITableView *)tableView;
 @end
